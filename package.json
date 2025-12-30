@@ -1,5 +1,15 @@
 {
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
   "dependencies": {
-    "@emailjs/nodejs": "^5.0.2"
+    "@emailjs/nodejs": "^5.0.2",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.2",
+    "cors": "^2.8.5"
   }
 }
