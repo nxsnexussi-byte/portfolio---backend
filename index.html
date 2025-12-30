@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nexuss | Full-Stack</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&family=Playfair+Display:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cursor-glow"></div>
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">NX<span>S</span></div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Journey</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact" class="nav-cta">Let's Connect</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-wrapper">
+                    <div class="hero-info">
+                        <span class="location" data-reveal>Engineering from Karachi, PK</span>
+                        <h1 class="hero-title" data-reveal>Crafting <span class="gold-text">Next-Gen</span> <br />Web
+                            Applications.</h1>
+                        <p class="hero-sub" data-reveal>I'm Nexuss. A Full Stack Engineer with 1.5+ years of experience
+                            specializing in the MERN stack and high-performance system architecture.</p>
+                        <div class="hero-actions" data-reveal>
+                            <a href="#projects" class="btn-gold">Explore Work</a>
+                            <a href="#about" class="btn-outline">About Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about-sec">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text" data-reveal>
+                        <h2 class="section-label">01 / About</h2>
+                        <h3>Turning complex logic into <br /><i>elegant user experiences.</i></h3>
+                        <p>I am a Freelance Full Stack Developer focused on building production-ready applications. I
+                            have successfully delivered over 20 projects, always prioritizing scalability and security.
+                        </p>
+                    </div>
+                    <div class="about-stats" data-reveal>
+                        <div class="stat-box">
+                            <h3>20+</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>1.5+</h3>
+                            <p>Years Exp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-label">02 / Journey</h2>
+                <div class="timeline">
+                    <div class="exp-item" data-reveal>
+                        <div class="exp-left">
+                            <h3>2025</h3>
+                            <p>Freelance Lead</p>
+                        </div>
+                        <div class="exp-right">
+                            <p>Delivered 7 client-facing projects using MERN, focusing on cloud deployments and Docker
+                                orchestration.</p>
+                        </div>
+                    </div>
+                    <div class="exp-item" data-reveal>
+                        <div class="exp-left">
+                            <h3>2024</h3>
+                            <p>WebPulse Intern</p>
+                        </div>
+                        <div class="exp-right">
+                            <p>Collaborated on large-scale production codebases and shipped 4 core features for the
+                                platform.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-label">03 / Selected Projects</h2>
+                <div class="bento-grid">
+                    <div class="bento-item main-project" data-reveal>
+                        <div class="bento-overlay">
+                            <h3>E-Commerce Suite</h3>
+                            <p>Full-stack marketplace solution.</p>
+                        </div>
+                    </div>
+                    <div class="bento-item side-project" data-reveal>
+                        <div class="bento-overlay">
+                            <h3>SaaS Dashboard</h3>
+                            <p>Real-time data visualization.</p>
+                        </div>
+                    </div>
+                    <div class="bento-item side-project" data-reveal>
+                        <div class="bento-overlay">
+                            <h3>API Gateway</h3>
+                            <p>High-performance Node services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-wrap" data-reveal>
+                    <h2 class="hero-title" style="font-size: 3rem;">Ready to <span class="gold-text">Begin?</span></h2>
+                    <form class="contact-form" id="portfolioContactForm">
+                        <div class="form-row">
+                            <input type="text" id="name" placeholder="Name" required>
+                            <input type="email" id="email" placeholder="Email" required>
+                        </div>
+                        <textarea id="message" placeholder="Message" rows="5" required></textarea>
+                        <button type="submit" class="btn-gold" style="width: 100%;">Initiate Project</button>
+                    </form>
+                    <p id="formResponse" style="margin-top: 15px; text-align: center;"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
