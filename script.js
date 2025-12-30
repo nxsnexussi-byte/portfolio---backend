@@ -23,17 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Magnetic Button Effect (Self-added unique touch)
+    // Magnetic Button Effect
     const btn = document.querySelector('.btn-gold');
-    btn.addEventListener('mousemove', (e) => {
-        const { left, top, width, height } = btn.getBoundingClientRect();
-        const x = e.clientX - left - width/2;
-        const y = e.clientY - top - height/2;
-        gsap.to(btn, { x: x * 0.3, y: y * 0.3, duration: 0.3 });
-    });
-    btn.addEventListener('mouseleave', () => {
-        gsap.to(btn, { x: 0, y: 0, duration: 0.3 });
-    });
+    if (btn) {
+        btn.addEventListener('mousemove', (e) => {
+            const { left, top, width, height } = btn.getBoundingClientRect();
+            const x = e.clientX - left - width/2;
+            const y = e.clientY - top - height/2;
+            gsap.to(btn, { x: x * 0.3, y: y * 0.3, duration: 0.3 });
+        });
+        btn.addEventListener('mouseleave', () => {
+            gsap.to(btn, { x: 0, y: 0, duration: 0.3 });
+        });
+    }
 });
 
 const contactForm = document.getElementById('portfolioContactForm');
@@ -50,10 +52,11 @@ contactForm.addEventListener('submit', async (e) => {
     };
 
     try {
-        responseMsg.innerText = "Sending...";
+        responseMsg.style.color = "white";
+        responseMsg.innerText = "Sending... Please wait.";
         
-        // Backend API ko call karna
-        const response = await fetch('http://localhost:5000/api/contact', {
+        // Backend API ko call karna (Render URL added here)
+        const response = await fetch('https://nexuss-portfolio-api.onrender.com/api/contact', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -68,6 +71,7 @@ contactForm.addEventListener('submit', async (e) => {
             responseMsg.innerText = "Message sent successfully! ✅";
             contactForm.reset(); // Form khali kar dena
         } else {
+            responseMsg.style.color = "red";
             responseMsg.innerText = "Error: " + result.message;
         }
     } catch (error) {
